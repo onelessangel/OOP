@@ -1,74 +1,69 @@
-# Homeworks
+     ____  _____    _    ____  __  __ _____
+    |  _ \| ____|  / \  |  _ \|  \/  | ____|
+    | |_) |  _|   / _ \ | | | | |\/| |  _|
+    |  _ <| |___ / ___ \| |_| | |  | | |___
+    |_| \_\_____/_/   \_\____/|_|  |_|_____|
 
-This repository contains (and is updated each university year):
+            Stroe Teodora, 321CA
 
- * content of each homework with detailed explanations of the assignments and automated checkers
- * media, such as photos or diagrams, that are used to better portrait examples as well as sources (where need-be - e.g. the UML diagrams can be exported to XML from [draw.io](https://www.draw.io/))
- * skeletons for homeworks which require a starting point
+## File guide
 
-## Repository folder structure
-
-The structure for a current homework is as follows:
-```
-teme
-|
-|	--->	homework*X*-name  [1]
-|		|	--->	checker  [2]
-|		|	--->	media [3]
-|		|	--->	skel  [4]
-|		|		|	---> image-source [5]
-|		|	homework*X*-name  [6]
-|	--->	...
-|	--->	...
-```
-
-The structure for an old or deprecated homework is as follows:
-```
-old
-|	--->	university_year [7]
-|		|	--->	old_homework*X*-name  [1]
-|		|		|	--->	checker  [2]
-|		|		|	--->	media	[3]
-|		|		|	--->	skel	[4]
-|		|		|		|	---> image-source [5]
-|		|		|	old_homework*X*-name  [6]
-|		|	--->	...
-|		|	--->	...
-|	--->	...
-|	--->	...
-```
-
-* **[1]** - folder with the homework name and contents (where *X* is the homework number)
-* **[2]** - folder with the checker [if need-be]
-* **[3]** - folder with images and diagrams [if need-be]
-* **[4]** - folder with the skeleton code [if need-be]
-* **[5]** - folder with sources of the images/diagrams [if need-be]
-* **[6]** - file with homework details and exercises - docuwiki code (**must** be the same as the folder name)
-* **[7]** - folder with the university year in which the homework was due
-
-## Contributing
-
-If you are interested in fixing issues, detailing laboratory content or just want to lend a helping hand,
-please see the document [How to Contribute](CONTRIBUTING.md), which covers the following:
-
-* [Coding Guidelines](CONTRIBUTING.md#coding-guidelines)
-* [Submitting pull requests](CONTRIBUTING.md#pull-requests)
-
-This organization has adopted the [Ethics regulation](http://wiki.cs.pub.ro/_media/studenti/licenta/regulament-comisie-de-etica-upb.pdf) and the [Code of Conduct for Students from the Faculty of Automation and Computers](http://wiki.cs.pub.ro/_media/studenti/licenta/cod-conduita-studenti-acs-.pdf). Failure to comply with or violate the rules set out in any of these documents will result in the sanctions imposed by UPB's internal regulations, such as reprimand, written warning, or expulsion from the University POLITEHNICA of Bucharest.
+    .
+    ├── .git
+    ├── src
+    │    ├── action
+    │    │     - Action class: used to store each action from input
+    │    │     - contains a sepparate class for each action type, each having static methods
+    │    ├── actor
+    │    │     - Actor class: used to store each actor input. In addition to the information
+    │    │       from the ActorInputData class, it also retains the average rating calculated
+    │    │       based on the average of each video in the filmography.
+    │    │     - ActorsAwards: an enum for the award types an actor can have
+    │    ├── checker
+    │    │     - the checker's sources
+    │    ├── common
+    │    │     - Constants: contains constants used by the program
+    │    ├── database
+    │    │     - Database class: in which a copy of the input is stored. In its implementation,
+    │    │       a lazy initialization of the Singleton Pattern is used.
+    │    │     - Builder class: used for creating JSON objects and populating the result array,
+    │    │       as well as the starting point for executing each action.
+    │    ├── entertainment
+    │    │     - Genre: an enum for the supported video genres
+    │    │     - GenrePopularity class: is used for having a list with the popularity of each genre
+    │    │     - Movie class: extends Video class, used for storing each movie from the input data.
+    │    │       In addition to the information from the MovieInputData class, it also contains a 
+    │    │       list of given ratings.
+    │    │     - Season class: class for representing a Season of a tv show
+    │    │     - Show class: extends Video class, used for storing each show from input data.
+    │    │     - Video class: superclass for the Movie and Show classes. In addition to the fields
+    │    │       given in the input classes, it can also retain the number of appearances in the
+    │    │       user's favorites list, the total number of views and the position of the video in
+    │    │       the database.
+    │    ├── fileio
+    │    │     - classes used for parsing the input files
+    │    ├── main
+    │    │     - Main class: used for testing the entire project. Contains the entry point of the
+    │    │       implementation.
+    │    │     - Test class: used for testing a single file
+    │    ├── user
+    │    │     - User class: used to store each user input. In addition to the information from the
+    │    │       UserInputData class, it also contains a list of rated videos and the total number of
+    │    │       given ratings.
+    │    ├── utils
+    │    │     - Counter class: contains static methods for increasing the favorite/view counter of a video
+    │    │     - Sorter class: contains static methods used for sorting lists after certain criterias
+    │    │     - Utils class: contains static methods that help with parsing and string modifying
+    └── README.md
 
 ## Feedback
-
-* Ask a question on [the Moodle instance of our university](http://cs.curs.pub.ro/).
-* Request a new feature on [GitHub](CONTRIBUTING.md).
-* File a bug in [GitHub Issues](https://github.com/oop-pub/teme/issues).
-
-## Related repositories
-
-* [Laboratories](https://github.com/oop-pub/laboratoare) - content related to laboratories
-* [Wiki](https://github.com/oop-pub/wiki) - content from the [docuwiki instance](http://elf.cs.pub.ro/poo/)
-
-## License
-
-Licensed under the [MIT](LICENSE) License.
-
-
+    PROS:
+      - the deadline was very accessible
+      - the topic was very interesting and helped me understand a practical use of the learned concepts
+    
+    CONS:
+      - we were suggested to use certain concepts that have not yet been presented to us
+      - the skeleton was very difficult to understand, we didn't have enough details in the README or
+        enough comments in the code.
+      - working with JSON libraries was quite difficult to understand at first, being a completely
+        new thing.
