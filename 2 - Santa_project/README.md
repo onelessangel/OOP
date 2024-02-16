@@ -53,7 +53,7 @@ operations:
 A **standard execution** involves the *actual simulation* of the round and the *writing of the current
 data* into the OutputLoader.
 
-###Pattern usage
+### Pattern usage
 
 A lazy implementation of the **Singleton Pattern** was used for the InputLoader, OutputLoader and the
 databases, because the program uses a single instance of each class in various places across the
