@@ -1,0 +1,4 @@
+Starting audit...
+[ERROR] C:\Users\eucli\IdeaProjects\POO\VideosDB\teme\tema\.\src\action\Query.java:73:55: '3' is a magic number. [MagicNumber]
+Audit done.
+Checkstyle ends with 1 errors.

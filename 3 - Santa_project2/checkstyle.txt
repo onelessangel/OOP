@@ -1,0 +1,8 @@
+Starting audit...
+[ERROR] C:\Users\eucli\IdeaProjects\POO\Santa_project2\.\src\simulation\Simulator.java:52:72: '100' is a magic number. [MagicNumber]
+[ERROR] C:\Users\eucli\IdeaProjects\POO\Santa_project2\.\src\strategies\elves\BlackElfStrategy.java:8:89: '30' is a magic number. [MagicNumber]
+[ERROR] C:\Users\eucli\IdeaProjects\POO\Santa_project2\.\src\strategies\elves\BlackElfStrategy.java:8:94: '100' is a magic number. [MagicNumber]
+[ERROR] C:\Users\eucli\IdeaProjects\POO\Santa_project2\.\src\strategies\elves\PinkElfStrategy.java:8:89: '30' is a magic number. [MagicNumber]
+[ERROR] C:\Users\eucli\IdeaProjects\POO\Santa_project2\.\src\strategies\elves\PinkElfStrategy.java:8:94: '100' is a magic number. [MagicNumber]
+Audit done.
+Checkstyle ends with 5 errors.
